@@ -7,4 +7,8 @@ package com.sn.repository.utils.util;
  * @date 2019年07月25日
  */
 public class BeanFieldCopyUtil {
+
+    public static void copySourceBen2Dest(Class source,Class dest){
+
+    }
 }
