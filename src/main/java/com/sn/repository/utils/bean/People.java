@@ -1,6 +1,7 @@
 package com.sn.repository.utils.bean;
 
-import com.sn.repository.utils.annotation.FieldCopy;
+import com.github.dozermapper.core.Mapping;
+import com.sn.repository.utils.annotation.FieldMapper;
 import lombok.Data;
 
 /**
@@ -12,8 +13,11 @@ import lombok.Data;
  */
 @Data
 public class People {
-    @FieldCopy(source = "name")
-    public String name;
-    @FieldCopy(source = "age")
-    public int age;
+
+    @Mapping("sourceName")
+    private String name;
+
+    @Mapping("sourceAge")
+    @FieldMapper(source = "sourceAge")
+    private int age;
 }
